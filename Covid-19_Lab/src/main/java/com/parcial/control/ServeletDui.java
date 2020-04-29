@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import com.google.gson.Gson;
 import com.parcial.Dao.UsuarioDuiDao;
 import com.parcial.model.Persona;
 
@@ -30,6 +31,12 @@ public class ServeletDui extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+	
+		
+		
+	
+	
 	}
 
 	/**
@@ -38,27 +45,33 @@ public class ServeletDui extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		
+		
 		String duip = request.getParameter("Dui");
-		
-		Persona per = new Persona();
-		UsuarioDuiDao duiDao = new UsuarioDuiDao();
-		per.setDui(duip);
-		
-		int verificarDui = duiDao.ingresoDui(per).size();
-		
-		if (verificarDui==1) {
 			
-			JOptionPane.showMessageDialog(null, "Entraste");
+			Persona per = new Persona();
+			UsuarioDuiDao duiDao = new UsuarioDuiDao();
+			per.setDui(duip);
+			
+			int verificarDui = duiDao.ingresoDui(per).size();
+			
+			if (verificarDui==1) {
+			
+				JOptionPane.showMessageDialog(null, "Entraste");
 			System.out.println("Entraste");
-		} else {
-			
+			} else {
+				
 			JOptionPane.showMessageDialog(null, "Este DUI no se encuentra en nuestros registros.\r\n" + 
-					"Intenta ingresando el DUI de otra persona de tu vivienda.");
-			System.out.println("Dui incorrecto");
+						"Intenta ingresando el DUI de otra persona de tu vivienda.");
+				System.out.println("Dui incorrecto");
 
-		}
-		response.sendRedirect("index.jsp");
+			}
+			response.sendRedirect("index.jsp");
 		
+		
+		
+	
+			
 		
 		
 	}

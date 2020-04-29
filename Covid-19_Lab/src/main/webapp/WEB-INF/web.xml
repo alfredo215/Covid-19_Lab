@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>com.parcial.control.ServeletDui</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeletFuciones</servlet-name>
+  	<display-name>ServeletFuciones</display-name>
+  	<description></description>
+  	<servlet-class>com.parcial.control.ServeletFuciones</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServeletDui</servlet-name>
   	<url-pattern>/ServeletDui</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletFuciones</servlet-name>
+  	<url-pattern>/ServeletFuciones</url-pattern>
   </servlet-mapping>
 </web-app>
