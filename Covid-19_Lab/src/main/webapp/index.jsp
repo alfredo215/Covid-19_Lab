@@ -20,7 +20,7 @@
 			console.log(datos)
 
 			var responder=document.getElementById('respuesta')
-			responder.innerHTML="Lo sentimos no eres beneficiado";
+			responder.innerHTML="Este DUI no se encuentra en nuestros registros.";
 			for(let item of datos){
 			responder.innerHTML = item.nombre+" Eres beneficiado de los $300 dolares";
 			
@@ -59,7 +59,7 @@ económico para alimentación en la emergencia</h2>
 </div>
 </div>
 
-<label id="respuesta"> </label>
+<h4 id="respuesta"> </h4>
 </div>
 
 
