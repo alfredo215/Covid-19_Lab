@@ -46,27 +46,19 @@ económico para alimentación en la emergencia</h2>
 <br>
 <br>
 <h1 class="text-center mt-1"><span class="badge badge-success">COVID-19</span></h1>
+<br>
+<br>
+<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+<div class="input-group mb-3">
+<input type="text" class="form-control light-grey" id="dui" name="Dui" style="background-color: #f2f2f2;" placeholder="Ingresa tu número de DUI">
+<div class="input-group-append">
+<input type="submit" value="CONSULTAR" id="carga" class="btn btn-success">
+<a href="tablaDui.jsp" class="btn btn-success">Registar  Dui</a>
+</div>
+</div>
 
-		 <table align="center">
-		 	<tbody>
-		 		<tr>
-		 			<td>
-		 <br>
-		<input type="text" placeholder="Ingresa tu número de DUI" name="Dui">
-		<input type="submit" value="CONSULTAR" id="carga" class="btn btn-success">
-		<a href="tablaDui.jsp" class="btn btn-success">Registar  Dui</a>
-		<br>
-		<br>
-		<br>
-		<br>
-
-		<label id="respuesta"> </label>
-		 				
-		 			</td>
-		 		</tr>
-		 	</tbody>
-
-		 </table>
+<label id="respuesta"> </label>
+</div>
 
 
 
