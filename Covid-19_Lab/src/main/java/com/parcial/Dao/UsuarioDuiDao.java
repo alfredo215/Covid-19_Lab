@@ -38,6 +38,29 @@ public class UsuarioDuiDao {
 		
 	}
 	
+	public List<Persona> muestraDui() {
+		List<Persona> personaD= new ArrayList();
+		EntityManager em;
+		EntityManagerFactory emf;
+		
+		emf = Persistence.createEntityManagerFactory("Covid-19_Lab");
+		em = emf.createEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			personaD = em.createQuery("from Persona").getResultList();
+			em.getTransaction().commit();
+			
+		} catch (Exception e) {
+			
+			System.out.println(e+"Error Dao muestraDui");
+		}
+		
+		
+		return personaD;
+		
+	}
+	
 	
 	public List<Persona> registrarD () {
 		List<Persona> ingresarD= new ArrayList();

@@ -61,21 +61,26 @@
 </head>
 
 <body>
+
+<p><img src="img\logo.png" class="mx-auto d-block" style="max-height: 60px; max-width:100%;">
+</p>
 	<div class="box-stilo">
 	
-	<img class="header" src="img/cabecera.jpg">
+	
 
 <br><br>
 
- <a href="botones.jsp" class="btn btn-info">Agregar</a>
+ <a href="botones.jsp" class="btn btn-info">Registre su Dui Aqui</a>
 
-<table class="table table-dark" id="tablaDatos">
+<table align="center" class="table table-dark" id="tablaDatos" >
 	
 	<thead>
+	
 	<th>ID</th>
 	<th>Nombre</th>	
 	<th>Numero Dui</th>	
 	<th>Opciones</th>
+	
 	</thead>
 
 	<tbody>

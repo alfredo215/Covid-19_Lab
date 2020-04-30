@@ -1,8 +1,5 @@
 
-table{
-	color: #ffff00;
-	background:#313e48; 
-}
+
 
 body{
 
@@ -15,7 +12,15 @@ body{
 	height: 100vh;
 }
 
-.header{
-border-radius: 50%;
-	
+img{
+	background-color: black;
+	color: white;
+	font-family: arial;
+	font-size:70px;
+}
+p{
+	background-color: black;
+	color: white;
+	font-family: arial;
+	font-size:70px; 
 }
