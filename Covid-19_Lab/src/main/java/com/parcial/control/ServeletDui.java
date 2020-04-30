@@ -32,7 +32,7 @@ public class ServeletDui extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-	String duip = request.getParameter("Dui");
+	/*String duip = request.getParameter("Dui");
 		
 		Persona per = new Persona();
 		UsuarioDuiDao duiDao = new UsuarioDuiDao();
@@ -51,7 +51,7 @@ public class ServeletDui extends HttpServlet {
 			System.out.println("Dui incorrecto");
 
 		}
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("index.jsp");*/
 		
 		
 	
@@ -63,25 +63,26 @@ public class ServeletDui extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
 		
-	
+		String capturar = request.getParameter("caja");
+		System.out.println(capturar);
 		
+		UsuarioDuiDao duiD = new UsuarioDuiDao();
+		Persona usuDao=new Persona();
+		usuDao.setDui(capturar);
 		
-			UsuarioDuiDao duiD = new UsuarioDuiDao();
+		Gson json=new Gson();
+		try {
 
-			Gson json=new Gson();
+			response.getWriter().append(json.toJson(duiD.ingresoDui(usuDao)));
 			
-			try {
-
-				response.getWriter().append(json.toJson(duiD.muestraDui()));
-				
-				
-			}catch (Exception e) {
-				JOptionPane.showMessageDialog(null,"Error en Gson"+e );
-				
-				
-			}
+			
+		}catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"Error en Gson"+e );
+			
+			
+		}
+		
 	
 			
 		

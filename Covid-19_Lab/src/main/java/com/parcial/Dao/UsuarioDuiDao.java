@@ -10,7 +10,8 @@ import com.parcial.model.Persona;
 public class UsuarioDuiDao {
 	
 	public List<Persona> ingresoDui(Persona per) {
-		List<Persona> personaD= new ArrayList();
+		List<Persona> personaD= new ArrayList<>();
+		System.out.println(per);
 		EntityManager em;
 		EntityManagerFactory emf;
 		
@@ -20,12 +21,7 @@ public class UsuarioDuiDao {
 		try {
 			em.getTransaction().begin();
 			personaD = em.createQuery("from Persona as D where D.dui='"+per.getDui()+"'").getResultList();
-		
-			//88888888-9
-			
-			//por si no funciona el primero
-			//from Cat where name='Fritz'
-			//from Cat as cat where cat.id = 123
+
 			em.getTransaction().commit();
 			
 		} catch (Exception e) {
