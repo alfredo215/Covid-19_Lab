@@ -22,7 +22,7 @@
 			var responder=document.getElementById('respuesta')
 			responder.innerHTML="Lo sentimos no eres beneficiado";
 			for(let item of datos){
-			responder.innerHTML = item.respuesta+"Eres beneficiado de los $300 dolares";
+			responder.innerHTML = item.nombre+" Eres beneficiado de los $300 dolares";
 			
 		}
 		});
